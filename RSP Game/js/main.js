@@ -43,7 +43,7 @@ function Rock() {
         count1++;
         result1.innerHTML = count1;
         first.style.filter = 'none'
-        second.style.filter = 'drop-shadow(22px 15px 3px rgb(41, 40, 40))'
+        second.style.filter = 'drop-shadow(5px  5px 3px rgb(41, 40, 40))'
         third.style.filter = 'none'
     }
     else if (image.src === rock.src && image1.src === paper.src) {
@@ -63,12 +63,14 @@ function Rock() {
 scissors.addEventListener("click", Scissors)
 function Scissors() {
     let rndm = Math.floor(Math.random() * 3);
-    var choose = arrelements[rndm];
+    let choose = arrelements[rndm];
     image.src = scissors.src;
     image1.src = choose.src
 
     rock.style.filter = 'none'
-    scissors.style.filter = 'drop-shadow(22px 15px 3px rgb(41, 40, 40))'
+    scissors.style.filter = 'drop-shadow(5px 5px 3px rgb(41, 40, 40))'
+    scissors.style.choose='none'
+    
     paper.style.filter = 'none'
 
     if (count2 >= 5) {
@@ -122,7 +124,7 @@ function Paper() {
         btn.style.display = 'block'
     }
 
-    paper.style.filter = 'drop-shadow(22px 15px 3px rgb(41, 40, 40))'
+    paper.style.filter = 'drop-shadow(5px 5px 3px rgb(41, 40, 40))'
     rock.style.filter = 'none'
     scissors.style.filter = 'none'
 
